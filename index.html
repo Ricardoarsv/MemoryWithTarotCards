@@ -38,6 +38,10 @@
 
     .TarotCards{
         width: 8.2em;
+        display: none;
+    }
+    .TarotCardsback{
+        width: 8.2em;
     }
     .title{
         font-size: 3em;
@@ -48,8 +52,48 @@
         -webkit-background-clip: text;
         
     }
-    
+    @media only screen and (min-width: 721px) and (max-width: 1366px) {
+        body{
+            background: url('./images/fondo.jpg') center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: center;
+            zoom: 70%;
+            margin: 4em, 4em 2em 4em;
+            display: flex;
+        }
+        table{
+            width: 80%;
+            margin-top: 4em;
+        }
 
+        #tarotAnimated:hover{
+            transition: 2sg;
+            background: white;
+        }
+
+        .Credits{
+            font-size: 12px;
+        }
+        .TarotCards{
+        width: 5.5em;
+        display: none;
+    }
+        .TarotCardsback{
+            width: 5.5em;
+        }
+        .title{
+            width: 50%;
+            font-size: 2.8em;
+            text-align: center;
+            font-family: courier;
+            color: transparent;
+            background: linear-gradient(darkblue);
+            -webkit-background-clip: text;
+            
+        }
+    }
+    
     @media only screen and (max-width: 720px) {
         body{
             background: url('./images/fondo.jpg') center;
@@ -62,7 +106,7 @@
         }
 
         table{
-            width: 9em;
+            width: 8em;
             margin-top: 3em;
         }
 
@@ -70,8 +114,12 @@
             font-size: 10px;
         }
         .TarotCards{
-        width: 4em;
+        width: 6em;
+        display: none;
     }
+        .TarotCardsback{
+            width: 6em;
+        }
         .title{
             width: 50%;
             font-size: 3em;
@@ -90,35 +138,61 @@
         <h1 class="title" >MEMORY WITH TAROT CARDS</h1>
         <table>
             <tr>
-                <td><img class='TarotCards' src="./images/Tarot's Card/Tarot1.png"></th>
+                <td><img class='TarotCards' src="./images/Tarot's Card/Tarot1.png"></td>
+                <td><img id="tarotAnimated" class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot2.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot3.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot4.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot5.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
             </tr>
             <tr>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot6.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot7.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot8.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot9.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot10.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
             </tr>
             <tr>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot1.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot2.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot3.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot4.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot5.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
             </tr>
             <tr>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot6.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot7.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot8.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot9.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
                 <td><img class='TarotCards' src="./images/Tarot's Card/Tarot10.png"></td>
+                <td><img class='TarotCardsback' src='./images/TarotsBackcover.png'></td>
             </tr>
         </table>
     </body>
+    <!-- <script>
+        function RevealCard(){
+            const Cardstate = document.querySelector()
+        }
+
+    </script> -->
     <footer>
         <br><br>
         <a class='Credits' href="http://www.freepik.com">Background Designed by Freepik</a><br>
