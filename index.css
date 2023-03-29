@@ -33,7 +33,12 @@
     display: none;
     cursor: pointer;
     user-select: none;
+    transition: transform 1s ease;
     transform-style: preserve-3d;
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    -ms-transition: transform 1s ease;
+    -o-transition: transform 1s ease;
 }
 
 .TarotCardsback{
@@ -41,9 +46,15 @@
     cursor: pointer;
     user-select: none;
     transform-style: preserve-3d;
-    
 }
 
+.flipped {
+    transform: rotateY(180deg);
+}
+.locket{
+    transition: 2s ease-out;
+    box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px rgb(83, 26, 163);
+}
 .title{
     font-size: 3em;
     text-align: center;
