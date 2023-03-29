@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb1').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(1);
             lastClickTime = currentTime;
         }
@@ -95,14 +95,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb2').onclick = function() {
             const currentTime = new Date().getTime();
-            if (currentTime - lastClickTime > 1500) {
+            if (currentTime - lastClickTime > 1240) {
                 Memorama(2);
                 lastClickTime = currentTime;
             }
             };
         document.getElementById('cardb3').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(3);
             lastClickTime = currentTime;
         }
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb4').onclick = function() {
             const currentTime = new Date().getTime();
-            if (currentTime - lastClickTime > 1500) {
+            if (currentTime - lastClickTime > 1240) {
                 Memorama(4);
                 lastClickTime = currentTime;
             }
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb5').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(5);
             lastClickTime = currentTime;
         }
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb6').onclick = function() {
             const currentTime = new Date().getTime();
-            if (currentTime - lastClickTime > 1500) {
+            if (currentTime - lastClickTime > 1240) {
                 Memorama(6);
                 lastClickTime = currentTime;
             }
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb7').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(7);
             lastClickTime = currentTime;
         }
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb8').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(8);
             lastClickTime = currentTime;
         }
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb9').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(9);
             lastClickTime = currentTime;
         }
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         document.getElementById('cardb10').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(10);
             lastClickTime = currentTime;
         }
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb11').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(11);
             lastClickTime = currentTime;
         }
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb12').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(12);
             lastClickTime = currentTime;
         }
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb13').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(13);
             lastClickTime = currentTime;
         }
@@ -190,21 +190,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb14').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(14);
             lastClickTime = currentTime;
         }
         };
         document.getElementById('cardb15').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(15);
             lastClickTime = currentTime;
         }
         };
         document.getElementById('cardb16').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(16);
             lastClickTime = currentTime;
         }
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb17').onclick = function() {
             const currentTime = new Date().getTime();
-            if (currentTime - lastClickTime > 1500) {
+            if (currentTime - lastClickTime > 1240) {
                 Memorama(17);
                 lastClickTime = currentTime;
             }
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb18').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(18);
             lastClickTime = currentTime;
         }
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb19').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(19);
             lastClickTime = currentTime;
         }
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('cardb20').onclick = function() {
         const currentTime = new Date().getTime();
-        if (currentTime - lastClickTime > 1500) {
+        if (currentTime - lastClickTime > 1240) {
             Memorama(20);
             lastClickTime = currentTime;
         }
