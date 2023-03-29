@@ -146,6 +146,7 @@
     }
     .title{
         width: 50%;
+        position: center;
         font-size: 3em;
         text-align: center;
         font-family: courier;
