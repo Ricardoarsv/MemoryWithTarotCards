@@ -83,58 +83,163 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     }
-        var memoriaTimeout;
-        function memoriaDebounced(cardId) {
-        // Cancela el temporizador anterior si lo hay
-        clearTimeout(memoriaTimeout);
-        // Crea un nuevo temporizador que ejecutará la función después de 1 segundo
-        memoriaTimeout = setTimeout(function() {
-            Memorama(cardId);
-        }, 3000);
+        let lastClickTime = 0;
+
+        document.getElementById('cardb1').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(1);
+            lastClickTime = currentTime;
         }
+        };
+
+        document.getElementById('cardb2').onclick = function() {
+            const currentTime = new Date().getTime();
+            if (currentTime - lastClickTime > 1500) {
+                Memorama(2);
+                lastClickTime = currentTime;
+            }
+            };
+        document.getElementById('cardb3').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(3);
+            lastClickTime = currentTime;
+        }
+        };
+
+        document.getElementById('cardb4').onclick = function() {
+            const currentTime = new Date().getTime();
+            if (currentTime - lastClickTime > 1500) {
+                Memorama(4);
+                lastClickTime = currentTime;
+            }
+            };
+
+        document.getElementById('cardb5').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(5);
+            lastClickTime = currentTime;
+        }
+        };
+
+        document.getElementById('cardb6').onclick = function() {
+            const currentTime = new Date().getTime();
+            if (currentTime - lastClickTime > 1500) {
+                Memorama(6);
+                lastClickTime = currentTime;
+            }
+            };
+
+        document.getElementById('cardb7').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(7);
+            lastClickTime = currentTime;
+        }
+        };
+
+        document.getElementById('cardb8').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(8);
+            lastClickTime = currentTime;
+        }
+        };
+
+        document.getElementById('cardb9').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(9);
+            lastClickTime = currentTime;
+        }
+        };
         
-        // Asigna la función de "debouncing" a cada botón
-        document.getElementById('cardb1').onclick = function() { memoriaDebounced(1) };
-        document.getElementById('cardb2').onclick = function() { memoriaDebounced(2) };
-        document.getElementById('cardb3').onclick = function() { memoriaDebounced(3) };
-        document.getElementById('cardb4').onclick = function() { memoriaDebounced(4) };
-        document.getElementById('cardb5').onclick = function() { memoriaDebounced(5) };
-        document.getElementById('cardb6').onclick = function() { memoriaDebounced(6) };
-        document.getElementById('cardb7').onclick = function() { memoriaDebounced(7) };
-        document.getElementById('cardb8').onclick = function() { memoriaDebounced(8) };
-        document.getElementById('cardb9').onclick = function() { memoriaDebounced(9) };
-        document.getElementById('cardb10').onclick = function() { memoriaDebounced(10) };
-        document.getElementById('cardb11').onclick = function() { memoriaDebounced(11) };
-        document.getElementById('cardb12').onclick = function() { memoriaDebounced(12) };
-        document.getElementById('cardb13').onclick = function() { memoriaDebounced(13) };
-        document.getElementById('cardb14').onclick = function() { memoriaDebounced(14) };
-        document.getElementById('cardb15').onclick = function() { memoriaDebounced(15) };
-        document.getElementById('cardb16').onclick = function() { memoriaDebounced(16) };
-        document.getElementById('cardb17').onclick = function() { memoriaDebounced(17) };
-        document.getElementById('cardb18').onclick = function() { memoriaDebounced(18) };
-        document.getElementById('cardb19').onclick = function() { memoriaDebounced(19) };
-        document.getElementById('cardb20').onclick = function() { memoriaDebounced(20) };
+        document.getElementById('cardb10').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(10);
+            lastClickTime = currentTime;
+        }
+        };
 
+        document.getElementById('cardb11').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(11);
+            lastClickTime = currentTime;
+        }
+        };
 
-        document.getElementById('cardb1').onclick = function() {Memorama(1) };
-        document.getElementById('cardb2').onclick = function() {Memorama(2) };
-        document.getElementById('cardb3').onclick = function() {Memorama(3) };
-        document.getElementById('cardb4').onclick = function() {Memorama(4) };
-        document.getElementById('cardb5').onclick = function() {Memorama(5) };
-        document.getElementById('cardb6').onclick = function() {Memorama(6) };
-        document.getElementById('cardb7').onclick = function() {Memorama(7) };
-        document.getElementById('cardb8').onclick = function() {Memorama(8) };
-        document.getElementById('cardb9').onclick = function() {Memorama(9) };
-        document.getElementById('cardb10').onclick = function() {Memorama(10) };
-        document.getElementById('cardb11').onclick = function() {Memorama(11) };
-        document.getElementById('cardb12').onclick = function() {Memorama(12) };
-        document.getElementById('cardb13').onclick = function() {Memorama(13) };
-        document.getElementById('cardb14').onclick = function() {Memorama(14) };
-        document.getElementById('cardb15').onclick = function() {Memorama(15) };
-        document.getElementById('cardb16').onclick = function() {Memorama(16) };
-        document.getElementById('cardb17').onclick = function() {Memorama(17) };
-        document.getElementById('cardb18').onclick = function() {Memorama(18) };
-        document.getElementById('cardb19').onclick = function() {Memorama(19) };
-        document.getElementById('cardb20').onclick = function() {Memorama(20) };
+        document.getElementById('cardb12').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(12);
+            lastClickTime = currentTime;
+        }
+        };
 
+        document.getElementById('cardb13').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(13);
+            lastClickTime = currentTime;
+        }
+        };
+
+        document.getElementById('cardb14').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(14);
+            lastClickTime = currentTime;
+        }
+        };
+        document.getElementById('cardb15').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(15);
+            lastClickTime = currentTime;
+        }
+        };
+        document.getElementById('cardb16').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(16);
+            lastClickTime = currentTime;
+        }
+        };
+
+        document.getElementById('cardb17').onclick = function() {
+            const currentTime = new Date().getTime();
+            if (currentTime - lastClickTime > 1500) {
+                Memorama(17);
+                lastClickTime = currentTime;
+            }
+            };
+
+        document.getElementById('cardb18').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(18);
+            lastClickTime = currentTime;
+        }
+        };
+
+        document.getElementById('cardb19').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(19);
+            lastClickTime = currentTime;
+        }
+        };
+
+        document.getElementById('cardb20').onclick = function() {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastClickTime > 1500) {
+            Memorama(20);
+            lastClickTime = currentTime;
+        }
+        };
+        
 })
