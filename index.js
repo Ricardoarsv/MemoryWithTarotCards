@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function flipcard(Cardnumber){
         var cardBack = document.getElementById('cardb' + Cardnumber);
         var cardFront = document.getElementById('cardf' + Cardnumber);
-        
+        var AudioFlipcard = document.getElementById('Flipcard');
+        AudioFlipcard.play();
         cardBack.style.display = 'none';
         cardFront.style.display = 'block';
         SelectCards.push(cardFront.id);
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var secondTAROT = document.getElementById(SelectCards[1]);
         var CoverOne = document.getElementById(SelectBackcover[0]);
         var CoverTwo = document.getElementById(SelectBackcover[1]);
-
+        var AudioSuccess = document.getElementById('SuccessMatch')
 
         if (firstTAROT.src === secondTAROT.src) {           
         firstTAROT.style.display = 'block';
@@ -66,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         secondTAROT.classList.add('locket');
         firstTAROT.classList.remove('flipped')
         secondTAROT.classList.remove('flipped')
+        AudioSuccess.play()
         SelectCards = [];
         SelectBackcover = [];
         } else {

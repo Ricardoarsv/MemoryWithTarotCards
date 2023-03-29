@@ -67,7 +67,7 @@
 }
 .locket{
     transition: 2s ease-out;
-    box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px rgb(83, 26, 163);
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(83, 26, 163);
 }
 .title{
     font-size: 3em;
