@@ -5,12 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./index.css">
-        <link rel="shorcut icon" href="./images/icon.png">
-        <audio 
-        autoplay
-        loop
-        src="./Sounds/Save-as.mp3" 
-        ></audio>
+
+        <link rel="shorcut icon" href="./images/icons/icon.png">
+        <audio autoplay loop src="./Sounds/Save-as.mp3" id="Soundtrack"></audio>
         <audio src="./Sounds/FlipCard.mp3" id="Flipcard"></audio>
         <audio src="./Sounds/Success.mp3" id="SuccessMatch"></audio>
         <title>TarotMemorama</title>
@@ -19,7 +16,8 @@
     <body>
         <div>
         <h1 class="title" >MEMORY WITH TAROT CARDS</h1>
-        <button class="button" onclick="window.location.reload()">Reiniciar tablero</button>
+        <button class="button" onclick="window.location.reload()">Reiniciar tablero</button><br>
+        <button class='AudioControls'  id="Mute"> <img src="./images/icons/MutedSound.png"></button> <button class="AudioControls" id="Nomute"><img src="./images/icons/speakericon.png"></button>
         </div>
         <table>
             <tr>
@@ -55,6 +53,6 @@
     <footer>
         <br><br>
         <a class='Credits' href="http://www.freepik.com">Background Designed by Freepik</a><br>
-        <a class="Credits" href="http://www.freepik.com">Tarot's Card Designed by rawpixel.com / Freepik</a>
+        <a class="Credits" href="http://www.freepik.com">Tarot's Card Designed by rawpixel.com / Freepik</a><br><br>
     </footer>
 </html>

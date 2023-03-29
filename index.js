@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const SountrackMusic = document.getElementById('Soundtrack');
+    SountrackMusic.volume = 0.3;
+    
+    var Play = document.getElementById('Nomute');
+    var DontPlay = document.getElementById('Mute')
+    function ChangeState(){
+        if (Play.style.display === 'block') {
+            Play.style.display = 'none';
+            SountrackMusic.volume = 0;
+            DontPlay.style.display = 'block';
+        } else {
+            DontPlay.style.display = 'none';
+            SountrackMusic.volume = 0.3;
+            Play.style.display = 'block';
+        }
+    }
+
+    document.getElementById('Nomute').onclick = ChangeState;
+    document.getElementById('Mute').onclick = ChangeState;
+
     const images = ['./images/Tarots Card/Tarot1.png', "./images/Tarots Card/Tarot2.png", "./images/Tarots Card/Tarot3.png", "./images/Tarots Card/Tarot4.png","./images/Tarots Card/Tarot5.png", "./images/Tarots Card/Tarot6.png", "./images/Tarots Card/Tarot7.png", "./images/Tarots Card/Tarot8.png", "./images/Tarots Card/Tarot9.png", "./images/Tarots Card/Tarot10.png"];
     const imagesRepeat = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
@@ -39,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function() {
         var cardBack = document.getElementById('cardb' + Cardnumber);
         var cardFront = document.getElementById('cardf' + Cardnumber);
         var AudioFlipcard = document.getElementById('Flipcard');
+        AudioFlipcard.volume = 0.2;
+
         AudioFlipcard.play();
         cardBack.style.display = 'none';
         cardFront.style.display = 'block';
@@ -59,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var CoverOne = document.getElementById(SelectBackcover[0]);
         var CoverTwo = document.getElementById(SelectBackcover[1]);
         var AudioSuccess = document.getElementById('SuccessMatch')
+        AudioSuccess.volume = 0.4;
 
         if (firstTAROT.src === secondTAROT.src) {           
         firstTAROT.style.display = 'block';

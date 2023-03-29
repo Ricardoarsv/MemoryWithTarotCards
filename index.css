@@ -4,7 +4,7 @@
 }  
 @media screen and (min-width: 971px) {
     body{
-        background: url('./images/fondo.jpg') center;
+        background: url('./images/fondo.webp') center;
         background-attachment: fixed;
         background-repeat: no-repeat;
         position: center;
@@ -17,6 +17,27 @@
         margin-top: 4em;
     }
 }
+
+.AudioControls{
+    background: rgba(255, 255, 255, 0.479);
+    border-radius: 40%;
+    border-style: none;
+    margin-left: 6em;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+    cursor: pointer;
+}
+.AudioControls img{
+    width: 4em;
+}
+
+#Mute{
+    display: none;
+}
+
+
 .button{
     font-size: 2em;
     text-align: center;
@@ -25,7 +46,7 @@
     width: 10em;
     font-family: courier;
     color: transparent;
-    background: linear-gradient(to top, darkblue 10%, white);
+    background: linear-gradient(to top, rgb(255, 255, 255) 10%, rgb(43, 18, 94));
     background-clip: none;
     -webkit-background-clip: text;
     border-style: none;
@@ -81,7 +102,7 @@
 }
 @media only screen and (min-width: 721px) and (max-width: 970px) {
     body{
-        background: url('./images/fondo.jpg') center;
+        background: url('./images/fondo.webp') center;
         background-attachment: fixed;
         background-repeat: no-repeat;
         position: center;
@@ -120,7 +141,7 @@
 
 @media only screen and (max-width: 720px) {
     body{
-        background: url('./images/fondo.jpg') center;
+        background: url('./images/fondo.webp') center;
         background-attachment: fixed;
         background-repeat: no-repeat;
         overflow: hidden;
