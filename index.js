@@ -230,8 +230,15 @@ document.addEventListener("DOMContentLoaded", function() {
             Finishstate.style.display = 'block';
     }
       
-
-
+    var Startstate = document.getElementById('StartMenu');
+    function StartGame(){
+            Startstate.style.display = 'none';
+            SountrackMusic.play();
+    }
+    setTimeout(() => {
+        document.getElementById('StartMenu').onclick = StartGame;
+    }, 1000);
+    
 
     function Memorama(Cardnumber) {
     flipcard(Cardnumber);

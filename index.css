@@ -21,6 +21,41 @@
 
 }
 
+#StartMenu{
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    background: rgba(210, 211, 222, 0.12);
+    border-radius: 1em;
+    width: 53%;
+    height: 85%;
+    position: absolute;
+    z-index: 1;
+    top: 49.2%;
+    left: 56.5%;
+    transform: translate(-50%, -50%);
+}
+#StartMenu button{
+    margin: 14%;
+    font-size: 5em;
+    cursor: pointer;
+    font-family: courier;
+    background: linear-gradient(to top, rgb(255, 255, 255) 10%, rgb(43, 18, 94));
+    background-clip: none;
+    -webkit-background-clip: text;
+    border-style: none;
+    color: transparent;
+}
+
+#StartMenu:hover button{
+    transform: scale(80%, 80%);
+    transition: 2s;
+    -webkit-transform: scale(80%, 80%);
+    -moz-transform: scale(80%, 80%);
+    -ms-transform: scale(80%, 80%);
+    -o-transform: scale(80%, 80%);
+}
+
 #FinishMenu{
     display: none;
     font-size: 2em;
@@ -135,6 +170,7 @@ input[type="range"] {
     background-clip: none;
     -webkit-background-clip: text;
     border-style: none;
+    cursor: pointer;
     
     
 }
@@ -144,6 +180,7 @@ input[type="range"] {
     text-decoration: none;
     color: white;
     font-size: 15px;
+    text-align: center;
     
 }
 
@@ -350,6 +387,7 @@ input[type="range"] {
 
     #FinishMenu{
         width: 60%;
+        height: 25%;
         font-size: 1.5em;
         top: 65%;
         left: 50%;
