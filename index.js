@@ -1,26 +1,78 @@
 document.addEventListener("DOMContentLoaded", function() {
-    window.addEventListener('load', function() {
-        const SountrackMusic = document.getElementById('Soundtrack');
-        play.SountrackMusic();
-        SountrackMusic.volume = 0.2;
-      });
-    
+    const SountrackMusic = document.getElementById('Soundtrack');
+    let volumeControl = document.getElementById('volumeControl');
+    SountrackMusic.volume = 0.01;
+    SountrackMusic.volume = volumeControl.value;
+
     var Play = document.getElementById('Nomute');
-    var DontPlay = document.getElementById('Mute')
+    var DontPlay = document.getElementById('Mute');
+    var musicstate = true;
+
+    Play.addEventListener('click', ChangeState);
+    DontPlay.addEventListener('click', ChangeState);
+
+    SountrackMusic.play();
+    
     function ChangeState(){
         if (Play.style.display === 'block') {
             Play.style.display = 'none';
             SountrackMusic.volume = 0;
+            musicstate = false;
             DontPlay.style.display = 'block';
+            
         } else {
             DontPlay.style.display = 'none';
-            SountrackMusic.volume = 0.2;
+            musicstate = true;
+            SountrackMusic.volume = 0.1;
             Play.style.display = 'block';
         }
     }
 
-    document.getElementById('Nomute').onclick = ChangeState;
-    document.getElementById('Mute').onclick = ChangeState;
+    volumeControl.addEventListener('input', function() {
+        if (musicstate === true){
+            SountrackMusic.volume = volumeControl.value;
+        } else {
+            SountrackMusic.volume = 0;
+        }
+    });
+
+    var DontPlaySounds = document.getElementById('Mutesounds')
+    var PlaySounds = document.getElementById('SoundIcon')
+    let AudioFlipcard1 = document.getElementById('Flipcard');
+    let AudioSuccess1 = document.getElementById('SuccessMatch')
+    var soundstate = true
+    var Soundcontrol = document.getElementById('soundcontrol');
+    function Togglesounds(){
+        if (PlaySounds.style.display === 'block') {
+            PlaySounds.style.display = 'none';
+            AudioFlipcard1.pause();
+            AudioSuccess1.pause();
+            soundstate = false
+            DontPlaySounds.style.display = 'block';
+        } else {
+            DontPlaySounds.style.display = 'none';
+            soundstate = true
+            AudioFlipcard1.volume = Soundcontrol.value;
+            AudioSuccess1.volume = Soundcontrol.value;
+            PlaySounds.style.display = 'block';
+        }
+    }
+
+    document.getElementById('Mutesounds').onclick = Togglesounds;
+    document.getElementById('SoundIcon').onclick = Togglesounds;
+
+    var MenuState = document.getElementsByClassName('menu');
+    function Togglemenu() {
+        if (MenuState[0].style.display === 'none') {
+          MenuState[0].style.display = 'block';
+        } else {
+          MenuState[0].style.display = 'none';
+        }
+      }
+      
+      document.getElementById('Menu').onclick = Togglemenu;
+    
+
 
     const images = ['./images/Tarots Card/Tarot1.webp', "./images/Tarots Card/Tarot2.webp", "./images/Tarots Card/Tarot3.webp", "./images/Tarots Card/Tarot4.webp","./images/Tarots Card/Tarot5.webp", "./images/Tarots Card/Tarot6.webp", "./images/Tarots Card/Tarot7.webp", "./images/Tarots Card/Tarot8.webp", "./images/Tarots Card/Tarot9.webp", "./images/Tarots Card/Tarot10.webp"];
     const imagesRepeat = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -62,9 +114,10 @@ document.addEventListener("DOMContentLoaded", function() {
         var cardBack = document.getElementById('cardb' + Cardnumber);
         var cardFront = document.getElementById('cardf' + Cardnumber);
         var AudioFlipcard = document.getElementById('Flipcard');
-        AudioFlipcard.volume = 0.2;
-
-        AudioFlipcard.play();
+        AudioFlipcard.volume = Soundcontrol.value;
+        if (soundstate === true){
+            AudioFlipcard.play();
+        }
         cardBack.style.display = 'none';
         cardFront.style.display = 'block';
         SelectCards.push(cardFront.id);
@@ -84,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var CoverOne = document.getElementById(SelectBackcover[0]);
         var CoverTwo = document.getElementById(SelectBackcover[1]);
         var AudioSuccess = document.getElementById('SuccessMatch')
-        AudioSuccess.volume = 0.4;
+        AudioSuccess.volume = Soundcontrol.value;
 
         if (firstTAROT.src === secondTAROT.src) {           
         firstTAROT.style.display = 'block';
@@ -93,7 +146,10 @@ document.addEventListener("DOMContentLoaded", function() {
         secondTAROT.classList.add('locket');
         firstTAROT.classList.remove('flipped')
         secondTAROT.classList.remove('flipped')
-        AudioSuccess.play()
+        if (soundstate === true){
+            AudioSuccess.play();
+        }
+        
         SelectCards = [];
         SelectBackcover = [];
         } else {

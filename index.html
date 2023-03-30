@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./index.css">
         <link rel="shorcut icon" href="./images/icons/icon.png">
-        <audio autoplay src="./Sounds/Save-as.mp3" id="Soundtrack"></audio>
+        <audio autoplay loop src="./Sounds/Save-as.mp3" id="Soundtrack"></audio>
         <audio src="./Sounds/FlipCard.mp3" id="Flipcard"></audio>
         <audio src="./Sounds/Success.mp3" id="SuccessMatch"></audio>
         <title>TarotMemorama</title>
@@ -15,8 +15,14 @@
     <body>
         <div>
         <h1 class="title" >MEMORY WITH TAROT CARDS</h1>
-        <button class="button" onclick="window.location.reload()">Reset Game</button><br>
-        <button class='AudioControls' id="Mute"> <img src="./images/icons/MutedSound.png" alt="MutedIcon"></button> <button class="AudioControls" id="Nomute"><img src="./images/icons/speakericon.png" alt="Speakericon"></button>
+            <button id="Menu" onclick="togglemenu()"><img src="./images/icons/Menu.png" alt="Menubutton"></button><button class="button" onclick="window.location.reload()">Reset Game</button>
+            <div class="menu">
+                <div class="AudioControlsMenu">
+                    <button class='AudioControls' id="Mute"> <img src="./images/icons/MutedMusicicon.png" alt="MutedIcon"></button> <button class="AudioControls" id="Nomute"><img src="./images/icons/Musicicon.png" alt="Speakericon"></button> <input type="range" id="volumeControl" min="0" max="0.5" step="0.001" value="0.1" class="slider"><br>
+                    <button class="AudioControls" id="Mutesounds"> <img src="./images/icons/MutedSound.png" alt="MutedSoundIcon"></button> <button class="AudioControls" id="SoundIcon"><img src="./images/icons/speakericon.png"></button>  <input type="range" id="soundcontrol" min="0" max="0.5" step="0.001" value="0.1" class="slider"><br>
+                </div>
+                <h1>Selecciona el estilo de carta deseado:</h1>
+            </div>
         </div>
         <table>
             <tr>
