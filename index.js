@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const SountrackMusic = document.getElementById('Soundtrack');
-    SountrackMusic.volume = 0.3;
+    SountrackMusic.volume = 0.2;
     
     var Play = document.getElementById('Nomute');
     var DontPlay = document.getElementById('Mute')
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             DontPlay.style.display = 'block';
         } else {
             DontPlay.style.display = 'none';
-            SountrackMusic.volume = 0.3;
+            SountrackMusic.volume = 0.2;
             Play.style.display = 'block';
         }
     }
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('Nomute').onclick = ChangeState;
     document.getElementById('Mute').onclick = ChangeState;
 
-    const images = ['./images/Tarots Card/Tarot1.png', "./images/Tarots Card/Tarot2.png", "./images/Tarots Card/Tarot3.png", "./images/Tarots Card/Tarot4.png","./images/Tarots Card/Tarot5.png", "./images/Tarots Card/Tarot6.png", "./images/Tarots Card/Tarot7.png", "./images/Tarots Card/Tarot8.png", "./images/Tarots Card/Tarot9.png", "./images/Tarots Card/Tarot10.png"];
+    const images = ['./images/Tarots Card/Tarot1.webp', "./images/Tarots Card/Tarot2.webp", "./images/Tarots Card/Tarot3.webp", "./images/Tarots Card/Tarot4.webp","./images/Tarots Card/Tarot5.webp", "./images/Tarots Card/Tarot6.webp", "./images/Tarots Card/Tarot7.webp", "./images/Tarots Card/Tarot8.webp", "./images/Tarots Card/Tarot9.webp", "./images/Tarots Card/Tarot10.webp"];
     const imagesRepeat = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
     function getRandomImage() {

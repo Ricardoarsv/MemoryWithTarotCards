@@ -4,7 +4,7 @@
 }  
 @media screen and (min-width: 971px) {
     body{
-        background: url('./images/fondo.webp') center;
+        background: url('./images/Fondos/1.webp') center;
         background-attachment: fixed;
         background-repeat: no-repeat;
         position: center;
