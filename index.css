@@ -191,7 +191,7 @@
         overflow: hidden;
         zoom: 90%;
         font-size: 10px;
-        margin: 0 1.8em 1em 3em;
+        margin: 0 1.8em 1em;
     }
 
     table{
@@ -233,6 +233,7 @@
     }
 
     .title{
-        text-align: center;
+        margin-left: 0em;
+        width: 0%;
     }
 }
