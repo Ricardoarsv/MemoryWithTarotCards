@@ -262,7 +262,7 @@ input[type="range"] {
         text-align: center;
         font-family: courier;
         color: transparent;
-        background: linear-gradient(to bottom, white 20%, darkblue);
+        background: linear-gradient(to top, rgb(255, 255, 255) 20%, rgb(43, 18, 94));
         background-clip: none;
         -webkit-background-clip: text;
         
@@ -346,5 +346,13 @@ input[type="range"] {
 
     #Menu{
         margin-left: 1em;
+    }
+
+    #FinishMenu{
+        width: 60%;
+        font-size: 1.5em;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
