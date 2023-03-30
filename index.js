@@ -72,6 +72,102 @@ document.addEventListener("DOMContentLoaded", function() {
       
       document.getElementById('Menu').onclick = Togglemenu;
     
+    const images1 = './images/Tarots Card/TarotsBackcover1.webp';
+    const images2 = './images/Tarots Card/TarotsBackcover2.webp';
+    const images3 = './images/Tarots Card/TarotsBackcover3.webp';
+    const images4 = './images/Tarots Card/TarotsBackcover4.webp';
+
+    document.getElementById('Backcoverexample1').onclick = function() {
+        document.getElementById('cardb1').src = images1;
+        document.getElementById('cardb2').src = images1;
+        document.getElementById('cardb3').src = images1;
+        document.getElementById('cardb4').src = images1;
+        document.getElementById('cardb5').src = images1;
+        document.getElementById('cardb6').src = images1;
+        document.getElementById('cardb7').src = images1;
+        document.getElementById('cardb8').src = images1;
+        document.getElementById('cardb9').src = images1;
+        document.getElementById('cardb10').src = images1;
+        document.getElementById('cardb11').src = images1;
+        document.getElementById('cardb12').src = images1;
+        document.getElementById('cardb13').src = images1;
+        document.getElementById('cardb14').src = images1;
+        document.getElementById('cardb15').src = images1;
+        document.getElementById('cardb16').src = images1;
+        document.getElementById('cardb17').src = images1;
+        document.getElementById('cardb18').src = images1;
+        document.getElementById('cardb19').src = images1;
+        document.getElementById('cardb20').src = images1;
+    };
+
+        document.getElementById('Backcoverexample2').onclick = function() {
+        document.getElementById('cardb1').src = images2;
+        document.getElementById('cardb2').src = images2;
+        document.getElementById('cardb3').src = images2;
+        document.getElementById('cardb4').src = images2;
+        document.getElementById('cardb5').src = images2;
+        document.getElementById('cardb6').src = images2;
+        document.getElementById('cardb7').src = images2;
+        document.getElementById('cardb8').src = images2;
+        document.getElementById('cardb9').src = images2;
+        document.getElementById('cardb10').src = images2;
+        document.getElementById('cardb11').src = images2;
+        document.getElementById('cardb12').src = images2;
+        document.getElementById('cardb13').src = images2;
+        document.getElementById('cardb14').src = images2;
+        document.getElementById('cardb15').src = images2;
+        document.getElementById('cardb16').src = images2;
+        document.getElementById('cardb17').src = images2;
+        document.getElementById('cardb18').src = images2;
+        document.getElementById('cardb19').src = images2;
+        document.getElementById('cardb20').src = images2;
+    };
+
+    document.getElementById('Backcoverexample3').onclick = function() {
+        document.getElementById('cardb1').src = images3;
+        document.getElementById('cardb2').src = images3;
+        document.getElementById('cardb3').src = images3;
+        document.getElementById('cardb4').src = images3;
+        document.getElementById('cardb5').src = images3;
+        document.getElementById('cardb6').src = images3;
+        document.getElementById('cardb7').src = images3;
+        document.getElementById('cardb8').src = images3;
+        document.getElementById('cardb9').src = images3;
+        document.getElementById('cardb10').src = images3;
+        document.getElementById('cardb11').src = images3;
+        document.getElementById('cardb12').src = images3;
+        document.getElementById('cardb13').src = images3;
+        document.getElementById('cardb14').src = images3;
+        document.getElementById('cardb15').src = images3;
+        document.getElementById('cardb16').src = images3;
+        document.getElementById('cardb17').src = images3;
+        document.getElementById('cardb18').src = images3;
+        document.getElementById('cardb19').src = images3;
+        document.getElementById('cardb20').src = images3;
+    };
+
+    document.getElementById('Backcoverexample4').onclick = function() {
+        document.getElementById('cardb1').src = images4;
+        document.getElementById('cardb2').src = images4;
+        document.getElementById('cardb3').src = images4;
+        document.getElementById('cardb4').src = images4;
+        document.getElementById('cardb5').src = images4;
+        document.getElementById('cardb6').src = images4;
+        document.getElementById('cardb7').src = images4;
+        document.getElementById('cardb8').src = images4;
+        document.getElementById('cardb9').src = images4;
+        document.getElementById('cardb10').src = images4;
+        document.getElementById('cardb11').src = images4;
+        document.getElementById('cardb12').src = images4;
+        document.getElementById('cardb13').src = images4;
+        document.getElementById('cardb14').src = images4;
+        document.getElementById('cardb15').src = images4;
+        document.getElementById('cardb16').src = images4;
+        document.getElementById('cardb17').src = images4;
+        document.getElementById('cardb18').src = images4;
+        document.getElementById('cardb19').src = images4;
+        document.getElementById('cardb20').src = images4;
+    };
 
 
     const images = ['./images/Tarots Card/Tarot1.webp', "./images/Tarots Card/Tarot2.webp", "./images/Tarots Card/Tarot3.webp", "./images/Tarots Card/Tarot4.webp","./images/Tarots Card/Tarot5.webp", "./images/Tarots Card/Tarot6.webp", "./images/Tarots Card/Tarot7.webp", "./images/Tarots Card/Tarot8.webp", "./images/Tarots Card/Tarot9.webp", "./images/Tarots Card/Tarot10.webp"];
@@ -325,5 +421,38 @@ document.addEventListener("DOMContentLoaded", function() {
             lastClickTime = currentTime;
         }
         };
-        
+
+        const cards = document.querySelectorAll('.TarotCards');
+
+        let cartasLevantadas = 0;
+
+        cards.forEach(card => {
+        card.addEventListener('click', () => {
+
+            card.classList.add('locket');
+    
+            cartasLevantadas++;
+            
+            if (cartasLevantadas === cards.length) {
+            verificarCartasLevantadas();
+            }
+        });
+        });
+
+        function verificarCartasLevantadas() {
+        const cards = document.querySelectorAll('.TarotCards');
+
+        let EveryUp = true;
+        cards.forEach(card => {
+            if (!card.classList.contains('locket')) {
+            EveryUp = false;
+            return;
+            }
+        });
+
+        if (EveryUp) {
+            alert('¡Felicidades! Has levantado todas las cartas.');
+        }
+        }
+
 })

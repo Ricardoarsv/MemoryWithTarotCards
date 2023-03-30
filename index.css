@@ -45,9 +45,17 @@
     display: none;
     padding: 2em;
     font-family: courier;
-    color: rgb(25, 30, 154);
+    color: rgb(6, 9, 47);
 }
 
+.menu button{
+    border-style: none;
+    background: transparent;
+}
+.menu img{
+    width: 7em;
+    cursor: pointer;
+}
 .AudioControlsMenu{
     display: flex;
     flex-wrap: wrap;
@@ -158,6 +166,10 @@ input[type="range"] {
     -webkit-background-clip: text;
     
 }
+
+
+
+
 @media only screen and (min-width: 721px) and (max-width: 970px) {
     body{
         background: url('./images/Fondos/bg.jpg') center;
