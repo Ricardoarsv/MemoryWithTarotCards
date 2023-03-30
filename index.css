@@ -290,10 +290,8 @@ input[type="range"] {
     }
 
     .button{
-        font-size: 2em;
-        text-align: center;
-        height: 2em;
-        width: 10em;
+        font-size: 3.5em;
+        margin-left: 0.5em;
         font-family: courier;
         color: transparent;
         background: linear-gradient(to top, rgb(255, 255, 255) 10%, rgb(43, 18, 94));
@@ -308,7 +306,7 @@ input[type="range"] {
     }
     .menu{
         width: 61%;
-        height: 60%;
+        height: 50%;
     }
 
     .menu img{
@@ -321,5 +319,14 @@ input[type="range"] {
 
     #soundcontrol{
         width: 60%;
+    }
+
+    #Menu img{
+        margin-left: 0.5em;
+        width: 2.5em;
+    }
+
+    #Menu{
+        margin-left: 1em;
     }
 }
