@@ -224,6 +224,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 100);
       }
       
+      var LastCard = 0
+      var Finishstate = document.getElementById('FinishMenu');
+      function Finish(){
+            Finishstate.style.display = 'block';
+    }
+      
+
+
 
     function Memorama(Cardnumber) {
     flipcard(Cardnumber);
@@ -244,6 +252,10 @@ document.addEventListener("DOMContentLoaded", function() {
         secondTAROT.classList.remove('flipped')
         if (soundstate === true){
             AudioSuccess.play();
+            LastCard = LastCard + 2
+            if (LastCard === 20){
+                Finish()
+            }
         }
         
         SelectCards = [];

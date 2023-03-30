@@ -21,6 +21,24 @@
 
 }
 
+#FinishMenu{
+    display: none;
+    font-size: 2em;
+    text-align: center;
+    background: rgba(245, 245, 245, 0.556);
+    border-radius: 1em;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
 
 #Menu{
     margin-left: 6em;
@@ -162,7 +180,7 @@ input[type="range"] {
     text-align: center;
     font-family: courier;
     color: transparent;
-    background: linear-gradient(to top, darkblue 10%, white);
+    background: linear-gradient(to top, rgb(255, 255, 255) 10%, rgb(43, 18, 94));
     background-clip: none;
     -webkit-background-clip: text;
     
