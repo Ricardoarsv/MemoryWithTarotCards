@@ -393,4 +393,18 @@ input[type="range"] {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+    #StartMenu{
+        margin-top: 58%;
+        margin-left: 12%;
+        font-size: 1em;
+        height: 62%;
+        width: 80%;
+        top: 30%;
+        left: 37%;
+    }
+
+    #Start{
+        padding-top: 20%;
+    }
 }
