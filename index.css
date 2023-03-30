@@ -45,6 +45,7 @@
     -webkit-background-clip: text;
     border-style: none;
     color: transparent;
+    user-select: none;
 }
 
 #StartMenu:hover button{
@@ -395,10 +396,10 @@ input[type="range"] {
     }
 
     #StartMenu{
-        margin-top: 58%;
+        margin-top: 50%;
         margin-left: 12%;
         font-size: 1em;
-        height: 62%;
+        height: 50%;
         width: 80%;
         top: 30%;
         left: 37%;
