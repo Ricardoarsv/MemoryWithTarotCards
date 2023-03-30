@@ -307,7 +307,8 @@ input[type="range"] {
         width: 80%;
     }
     .menu{
-        width: 65%;
+        width: 61%;
+        height: 60%;
     }
 
     .menu img{
