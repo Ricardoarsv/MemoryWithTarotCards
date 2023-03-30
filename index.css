@@ -254,7 +254,7 @@ input[type="range"] {
         width: 5.5em;
     }
     .title{
-        width: 50%;
+        width: 30%;
         font-size: 2.8em;
         text-align: center;
         font-family: courier;
@@ -266,7 +266,7 @@ input[type="range"] {
     }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 376px) and (max-width:720px){
     body{
         background: url('./images/Fondos/bg.jpg') center;
         background-attachment: fixed;
@@ -294,8 +294,7 @@ input[type="range"] {
         width: 6em;
     }
     .title{
-        margin-left: 2.5em;
-        width: 50%;
+        width: 100%;
         font-size: 3em;
         text-align: center;
         font-family: courier;
@@ -305,11 +304,90 @@ input[type="range"] {
         -webkit-background-clip: text;
         
     }
-    .button{
-        margin-left: 3em;
+    .AudioControls{
+        background: rgba(255, 255, 255, 0.479);
+        border-radius: 40%;
+        border-style: none;
+        -webkit-border-radius: 40%;
+        -moz-border-radius: 40%;
+        -ms-border-radius: 40%;
+        -o-border-radius: 40%;
+        cursor: pointer;
+    }
+    .AudioControls img{
+        width: 2.5em;
+    }
+    
+    #Mute{
+        display: none;
     }
 
+    .button{
+        font-size: 3.5em;
+        margin-left: 0.5em;
+        font-family: courier;
+        color: transparent;
+        background: linear-gradient(to top, rgb(255, 255, 255) 10%, rgb(43, 18, 94));
+        background-clip: none;
+        -webkit-background-clip: text;
+        border-style: none;
+    }
+
+    .title{
+        margin-left: 1em;
+        width: 80%;
+    }
+    .menu{
+        width: 61%;
+        height: 50%;
+        margin-top: 3em;
+    }
+
+    .menu img{
+        width: 3.7em;
+    }
+    
+    #volumeControl{
+        width: 60%;
+    }
+
+    #soundcontrol{
+        width: 60%;
+    }
+
+    #Menu img{
+        margin-left: 0.5em;
+        width: 2.5em;
+    }
+
+    #Menu{
+        margin-left: 1em;
+    }
+
+    #FinishMenu{
+        width: 60%;
+        height: 25%;
+        font-size: 1.5em;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #StartMenu{
+        margin-top: 24.5em;
+        margin-left: 6em;
+        font-size: 1em;
+        height: 37em;
+        width: 80%;
+        top: 30%;
+        left: 37%;
+    }
+
+    #Start{
+        padding-top: 20%;
+    }
 }
+
 
 @media screen and (max-width: 375px){
     body{
