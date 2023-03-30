@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const SountrackMusic = document.getElementById('Soundtrack');
-    SountrackMusic.volume = 0.2;
+    window.addEventListener('load', function() {
+        const SountrackMusic = document.getElementById('Soundtrack');
+        play.SountrackMusic();
+        SountrackMusic.volume = 0.2;
+      });
     
     var Play = document.getElementById('Nomute');
     var DontPlay = document.getElementById('Mute')
