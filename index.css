@@ -35,6 +35,7 @@
 
 .menu{
     position: absolute;
+    z-index: 1;
     text-align: center;
     margin-left: 1em;
     background: rgba(192, 192, 192, 0.205);
@@ -211,7 +212,7 @@ input[type="range"] {
 
 @media only screen and (max-width: 720px) {
     body{
-        background: url('./images/Fondos/Tarotbg.jpg') center;
+        background: url('./images/Fondos/bg.jpg') center;
         background-attachment: fixed;
         background-repeat: no-repeat;
         overflow: hidden;
@@ -274,7 +275,6 @@ input[type="range"] {
         background: rgba(255, 255, 255, 0.479);
         border-radius: 40%;
         border-style: none;
-        margin-left: 6em;
         -webkit-border-radius: 40%;
         -moz-border-radius: 40%;
         -ms-border-radius: 40%;
@@ -305,5 +305,20 @@ input[type="range"] {
     .title{
         margin-left: 1em;
         width: 80%;
+    }
+    .menu{
+        width: 65%;
+    }
+
+    .menu img{
+        width: 3.7em;
+    }
+    
+    #volumeControl{
+        width: 60%;
+    }
+
+    #soundcontrol{
+        width: 60%;
     }
 }
