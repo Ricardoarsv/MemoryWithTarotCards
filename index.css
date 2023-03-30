@@ -160,7 +160,7 @@ input[type="range"] {
 }
 @media only screen and (min-width: 721px) and (max-width: 970px) {
     body{
-        background: url('./images/Fondos/Tarotbg.jpg') center;
+        background: url('./images/Fondos/bg.jpg') center;
         background-attachment: fixed;
         background-repeat: no-repeat;
         position: center;
@@ -244,7 +244,7 @@ input[type="range"] {
 
 @media screen and (max-width: 375px){
     body{
-        background: url('./images/Fondos/Tarotbg.jpg') center;
+        background: url('./images/Fondos/bg.jpg') center;
         background-attachment: fixed;
         background-repeat: no-repeat;
         overflow: hidden;
