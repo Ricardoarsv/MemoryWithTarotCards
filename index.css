@@ -191,7 +191,7 @@
         overflow: hidden;
         zoom: 90%;
         font-size: 10px;
-        margin: 0 1.8em 1em 1.8em;
+        margin: 0 1.8em 1em 3em;
         padding: 2em;
     }
 
@@ -231,4 +231,9 @@
         background-clip: none;
         -webkit-background-clip: text;
         border-style: none;
+    }
+
+    h1{
+        text-align: center;
+    }
 }
