@@ -422,37 +422,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         };
 
-        const cards = document.querySelectorAll('.TarotCards');
-
-        let cartasLevantadas = 0;
-
-        cards.forEach(card => {
-        card.addEventListener('click', () => {
-
-            card.classList.add('locket');
     
-            cartasLevantadas++;
-            
-            if (cartasLevantadas === cards.length) {
-            verificarCartasLevantadas();
-            }
-        });
-        });
-
-        function verificarCartasLevantadas() {
-        const cards = document.querySelectorAll('.TarotCards');
-
-        let EveryUp = true;
-        cards.forEach(card => {
-            if (!card.classList.contains('locket')) {
-            EveryUp = false;
-            return;
-            }
-        });
-
-        if (EveryUp) {
-            alert('¡Felicidades! Has levantado todas las cartas.');
-        }
-        }
 
 })
