@@ -396,10 +396,10 @@ input[type="range"] {
     }
 
     #StartMenu{
-        margin-top: 50%;
-        margin-left: 12%;
+        margin-top: 3em;
+        margin-left: 5.5em;
         font-size: 1em;
-        height: 50%;
+        height: 37em;
         width: 80%;
         top: 30%;
         left: 37%;
