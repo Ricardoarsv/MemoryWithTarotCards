@@ -1,0 +1,493 @@
+@font-face {
+    font-family: courier;
+    src: url('./Fonts/DalekPinpointBold.ttf');
+}
+@media screen and (min-width: 971px) {
+    body{
+        background: url('./images/Fondos/bg.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        zoom: 70%;
+        margin: 4em, 4em 2em 4em;
+        display: flex;
+    }
+    table{
+        width: 60%;
+        margin-top: 4em;
+    }
+    #Menu {
+        background-color: #fff;
+    }
+
+}
+
+#StartMenu{
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    background: rgba(210, 211, 222, 0.12);
+    border-radius: 1em;
+    width: 50%;
+    height: 85%;
+    position: absolute;
+    z-index: 1;
+    top: 49.2%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+#StartMenu button{
+    margin: 14%;
+    font-size: 5em;
+    cursor: pointer;
+    font-family: courier;
+    background: linear-gradient(to top, rgb(255, 255, 255) 10%, rgb(43, 18, 94));
+    background-clip: none;
+    -webkit-background-clip: text;
+    border-style: none;
+    color: transparent;
+    user-select: none;
+}
+
+#StartMenu:hover button{
+    transform: scale(80%, 80%);
+    transition: 2s;
+    -webkit-transform: scale(80%, 80%);
+    -moz-transform: scale(80%, 80%);
+    -ms-transform: scale(80%, 80%);
+    -o-transform: scale(80%, 80%);
+}
+
+#FinishMenu{
+    display: none;
+    font-size: 2em;
+    text-align: center;
+    background: rgba(245, 245, 245, 0.556);
+    border-radius: 1em;
+    width: 30%;
+    height: 40%;
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: 55%;
+    margin-block-start: 10px;
+    margin-block-end: 1px;
+    transform: translate(-50%, -50%);
+}
+#Username{
+    text-align: center;
+    margin-block-start: 1px;
+    margin-block-end: 1px;
+}
+#FinishMenu input{
+    border-radius: 1em;
+    height: 2em;
+    text-align: center;
+    border: none;
+}
+
+#FinishMenu button{
+    border-radius: 1em;
+    height: 2em;
+    text-align: center;
+    border: none;
+}
+
+#FinishMenu:hover button{
+    background: #4c7fff;
+    transition: 3s ease-in-out;
+    -webkit-transition: 3s ease-in-out;
+    -moz-transition: 3s ease-in-out;
+    -ms-transition: 3s ease-in-out;
+    -o-transition: 3s ease-in-out;
+}
+
+#Menu{
+    margin-left: 6em;
+    background: transparent;
+    border-style: none;
+    cursor: pointer;
+}
+
+#Menu img{
+    width: 3.5em;
+}
+
+.menu{
+    transform: rotateY(0);
+    transition: transform 0.5s ease;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    margin-left: 1em;
+    background: rgba(192, 192, 192, 0.205);
+    border-radius: 10%;
+    border: 1px solid rgba(24, 0, 71, 0.776);
+    width: 25%;
+    height: 50%;
+    display: none;
+    padding: 2em;
+    font-family: courier;
+    color: rgb(6, 9, 47);
+    user-select: none;
+}
+.Show {
+    transform: scale3d(10%);
+    -webkit-transform: scale3d(10%);
+    -moz-transform: scale3d(10%);
+    -ms-transform: scale3d(10%);
+    -o-transform: scale3d(10%);
+}
+.menu button{
+    border-style: none;
+    background: transparent;
+}
+.menu img{
+    width: 7em;
+    cursor: pointer;
+}
+.AudioControlsMenu{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AudioControls{
+    background: rgba(255, 255, 255, 0.479);
+    border-radius: 100%;
+    border-style: none;
+    cursor: pointer;
+}
+.AudioControls img{
+    width: 4em;
+    position: center;
+}
+
+#Mute{
+    display: none;
+}
+#Mutesounds{
+    display: none;
+}
+#Nomute{
+    display: block;
+}
+#SoundIcon{
+    display: block;
+}
+
+input[type="range"] {
+    appearance: auto;
+    -webkit-appearance: none;
+    width: 80%;
+    height: 10px;
+    background-color: #4c7fff;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #0a25f5;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+
+
+.button{
+    font-size: 3.5em;
+    font-family: courier;
+    color: transparent;
+    background: linear-gradient(to top, rgb(255, 255, 255) 10%, rgb(43, 18, 94));
+    background-clip: none;
+    -webkit-background-clip: text;
+    border-style: none;
+    cursor: pointer;
+    
+    
+}
+.Credits{
+    background: rgb(50, 50, 77);
+    border-radius: 5%;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    width: 20em;
+    
+}
+
+.TarotCards{
+    width: 8.2em;
+    height: 11.6em;
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    transform-style: preserve-3d;
+}
+
+.TarotCardsback{
+    width: 8.2em;
+    cursor: pointer;
+    user-select: none;
+    transform-style: preserve-3d;
+}
+
+.flipped {
+    transition: 1s;
+    transform: rotateY(-100deg);
+    -webkit-transform: rotateY(-100deg);
+    -moz-transform: rotateY(-100deg);
+    -ms-transform: rotateY(-100deg);
+    -o-transform: rotateY(-100deg);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.locket{
+    transition: 2s ease-out;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(83, 26, 163);
+}
+.title{
+    font-size: 3em;
+    text-align: center;
+    font-family: courier;
+    color: transparent;
+    background: linear-gradient(to top, rgb(255, 255, 255) 10%, rgb(43, 18, 94));
+    background-clip: none;
+    -webkit-background-clip: text;
+    
+}
+
+.score{
+    visibility: hidden;
+    background: rgba(255, 255, 255, 0.227);
+    border-radius: 1em;
+    color: white;
+    margin-right: 0.5em;
+    margin-top: 1em;
+    width: 10em;
+    font-size: 2em;
+    font-family: courier;
+    border: 1px solid rgba(24, 0, 71, 0.776);
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    user-select: none;
+}
+
+.score td{
+    text-align: center;
+    font-size: 0.7em;
+}
+
+#Timer{
+    background: rgba(245, 245, 245, 0.261);
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    font-family: courier;
+    border: 1px solid rgba(24, 0, 71, 0.776);
+    border-radius: 1em;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+    body{
+        background: url('./images/Fondos/bg.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        zoom: 70%;
+        margin: 2em;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    table{
+        width: 100%;
+        margin-top: 2em;
+    }
+    #Menu {
+        background-color: #fff;
+    }
+
+}
+
+#StartMenu{
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+    background: rgba(210, 211, 222, 0.12);
+    border-radius: 1em;
+    width: 90%;
+    height: 60%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+#StartMenu button{
+    margin: 14%;
+    font-size: 4em;
+    cursor: pointer;
+    font-family: courier;
+    background: linear-gradient(to top, rgb(255, 255, 255) 10%, rgb(43, 18, 94));
+    background-clip: none;
+    -webkit-background-clip: text;
+    border-style: none;
+    color: transparent;
+    user-select: none;
+}
+
+#StartMenu:hover button{
+    transform: scale(80%, 80%);
+    transition: 2s;
+    -webkit-transform: scale(80%, 80%);
+    -moz-transform: scale(80%, 80%);
+    -ms-transform: scale(80%, 80%);
+    -o-transform: scale(80%, 80%);
+}
+
+#FinishMenu{
+    display: none;
+    font-size: 1.5em;
+    text-align: center;
+    background: rgba(245, 245, 245, 0.556);
+    border-radius: 1em;
+    width: 90%;
+    height: 30%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+#Username{
+    text-align: center;
+    margin-block-start: 1px;
+    margin-block-end: 1px;
+}
+#FinishMenu input{
+    border-radius: 1em;
+    height: 2em;
+    text-align: center;
+    border: none;
+}
+
+#FinishMenu button{
+    border-radius: 1em;
+    height: 2em;
+    text-align: center;
+    border: none;
+}
+
+#FinishMenu:hover button{
+    background: #4c7fff;
+    transition: 3s ease-in-out;
+    -webkit-transition: 3s ease-in-out;
+    -moz-transition: 3s ease-in-out;
+    -ms-transition: 3s ease-in-out;
+    -o-transition: 3s ease-in-out;
+}
+
+#Menu{
+    margin-left: 1em;
+    background: transparent;
+    border-style: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 970px) {
+    body{
+    background: url('./images/Fondos/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    zoom: 70%;
+    margin: 4em, 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    table{
+    width: 90%;
+    margin-top: 2em;
+    }
+    #Menu {
+    background-color: #fff;
+    }
+    }
+    
+@media screen and (max-width: 600px) {
+    #StartMenu{
+    width: 80%;
+    height: 60%;
+    top: 55%;
+    }
+    #StartMenu button{
+    font-size: 3em;
+    margin: 10%;
+    }
+    #FinishMenu{
+    width: 80%;
+    height: 70%;
+    top: 45%;
+    }
+    }
+    
+@media screen and (max-width: 450px) {
+    #StartMenu{
+    width: 90%;
+    height: 50%;
+    top: 60%;
+    }
+    #StartMenu button{
+    font-size: 2em;
+    margin: 8%;
+    }
+    #FinishMenu{
+    width: 90%;
+    height: 80%;
+    top: 50%;
+    }
+    #Menu {
+    margin-left: 1em;
+    }
+    .menu{
+    width: 80%;
+    padding: 1em;
+    font-size: 0.7em;
+    }
+    .menu img{
+    width: 5em;
+    }
+    .AudioControls{
+    width: 2em;
+    height: 2em;
+    }
+    .AudioControls img{
+    width: 2em;
+    }
+    }
+    
+@media screen and (max-width: 350px) {
+    #StartMenu button{
+    font-size: 1.5em;
+    margin: 6%;
+    }
+    .menu img{
+    width: 4em;
+    }
+    .AudioControls{
+    width: 1.5em;
+    height: 1.5em;
+    }
+    .AudioControls img{
+    width: 1.5em;
+    }
+}
