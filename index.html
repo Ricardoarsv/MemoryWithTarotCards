@@ -12,16 +12,17 @@
         <title>TarotMemorama</title>
         <script src="./index.js"></script>
     </head>
+    
     <body>
         <div>
         <h1 class="title" >MEMORY WITH TAROT CARDS</h1>
             <button id="Menu" onclick="togglemenu()"><img src="./images/icons/Menu.png" alt="Menubutton"></button><button class="button" onclick="window.location.reload()">Reset Game</button>
-            <div class="menu">
+            <div class="menu" id="Menuanimado">
                 <div class="AudioControlsMenu">
                     <button class='AudioControls' id="Mute"> <img src="./images/icons/MutedMusicicon.png" alt="MutedIcon"></button> <button class="AudioControls" id="Nomute"><img src="./images/icons/Musicicon.png" alt="Speakericon"></button> <input type="range" id="volumeControl" min="0" max="0.5" step="0.001" value="0.1" class="slider"><br>
                     <button class="AudioControls" id="Mutesounds"> <img src="./images/icons/MutedSound.png" alt="MutedSoundIcon"></button> <button class="AudioControls" id="SoundIcon"><img src="./images/icons/speakericon.png"></button>  <input type="range" id="soundcontrol" min="0" max="0.5" step="0.001" value="0.1" class="slider"><br>
                 </div>
-                <h1>Selecciona el estilo de carta deseado:</h1>
+                <h1>Select the back cover you want:</h1>
                 <button><img id='Backcoverexample1' src="./images/Tarots Card/TarotsBackcover1.webp" alt="Tarotbackcover"> </button> <button><img id='Backcoverexample2' src="./images/Tarots Card/TarotsBackcover2.webp" alt="Tarotbackcover"></button> <button><img id='Backcoverexample3' src="./images/Tarots Card/TarotsBackcover3.webp" alt="Tarotbackcover"> </button> <button><img id='Backcoverexample4' src="./images/Tarots Card/TarotsBackcover4.webp" alt="Tarotbackcover"></button>
             </div>
         </div>
@@ -43,6 +44,9 @@
             <div id="FinishMenu">
                 <h2>¡Congratulations!</h2>
                 <p>You have flipped all the cards and you have finished the game, press the 'Reset game' button to start again.</p>
+                <h3 id="Username">Username</h3>
+                <input id="Name" type="text" placeholder="Here" maxlength="8">
+                <button id="Save" type="submit" >Save</button>
             </div>
             <div id="StartMenu">
                 <button id="Start">Start Game</button>
@@ -63,10 +67,26 @@
             </tr>
         </table>
     </body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="./Javascripts/Config.js"></script>
     <footer>
         <br><br>
         <a class='Credits' href="http://www.freepik.com">Background Designed by Freepik</a><br>
         <a class="Credits" href="http://www.freepik.com">Tarot's Card Designed by rawpixel.com / Freepik</a><br><br>
-        <p class="Credits">to play the soundtrack 'start game'.</p>
+        <p class="Credits">To play the soundtrack 'start game'.</p>
+        <p class="Credits">To show score click in 'Timer'</p>
+        <div id="Timer">00:00:00</div>
+            <table class="score">
+                <thead>
+                    <tr>
+                        <th id="Username">Username</th>
+                        <th id="Time">Time</th>
+                    </tr>
+                </thead>
+                <tbody id="Puntajes">
+                </tbody>
+            </table><br>
     </footer>
 </html>

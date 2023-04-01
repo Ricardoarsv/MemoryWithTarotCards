@@ -60,13 +60,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById('Mutesounds').onclick = Togglesounds;
     document.getElementById('SoundIcon').onclick = Togglesounds;
-
+    
+    var MenuA = document.getElementById('Menuanimado')
     var MenuState = document.getElementsByClassName('menu');
     function Togglemenu() {
         if (MenuState[0].style.display === 'none') {
           MenuState[0].style.display = 'block';
+          MenuA.classList.add('Show');
+          console.log('Se aplico')
         } else {
           MenuState[0].style.display = 'none';
+          MenuA.classList.remove('Show');
+          console.log('Se quito')
         }
       }
       
@@ -169,6 +174,44 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('cardb20').src = images4;
     };
 
+    var SecondsFirebase = 0;
+    var seconds = 0;
+    var minutes = 0;
+    var hours = 0;
+    var timer;
+
+    function startTimer() {
+    timer = setInterval(showTime, 1000); // Se ejecuta la función showTime cada segundo (1000 milisegundos)
+    }
+
+    function showTime() {
+    SecondsFirebase++;
+    seconds++;
+    if (seconds == 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes == 60) {
+        minutes = 0;
+        hours++;
+        }
+    }
+    document.getElementById("Timer").innerHTML = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    }
+
+    function stopTimer() {
+    clearInterval(timer);
+    }
+
+    var Scorestate = document.getElementsByClassName('score')[0];
+    function ShowScore(){
+        if (Scorestate.style.visibility === 'hidden'){
+            Scorestate.style.visibility = 'visible'
+        } else {
+            Scorestate.style.visibility = 'visible'
+        }
+    }
+
+    document.getElementById("Timer").onclick = ShowScore
 
     const images = ['./images/Tarots Card/Tarot1.webp', "./images/Tarots Card/Tarot2.webp", "./images/Tarots Card/Tarot3.webp", "./images/Tarots Card/Tarot4.webp","./images/Tarots Card/Tarot5.webp", "./images/Tarots Card/Tarot6.webp", "./images/Tarots Card/Tarot7.webp", "./images/Tarots Card/Tarot8.webp", "./images/Tarots Card/Tarot9.webp", "./images/Tarots Card/Tarot10.webp"];
     const imagesRepeat = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -214,15 +257,24 @@ document.addEventListener("DOMContentLoaded", function() {
         if (soundstate === true){
             AudioFlipcard.play();
         }
-        cardBack.style.display = 'none';
-        cardFront.style.display = 'block';
+        
+
+        setTimeout(function(){
+            cardBack.style.display = 'none';
+            cardFront.style.display = 'block';
+            console.log('se aplico')
+        },700);
+    
+
+        
         SelectCards.push(cardFront.id);
         SelectBackcover.push(cardBack.id);
         
         setTimeout(function() {
-          cardFront.classList.add('flipped');
+          cardBack.classList.add('flipped');
         }, 100);
       }
+      
       
       var LastCard = 0
       var Finishstate = document.getElementById('FinishMenu');
@@ -234,6 +286,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function StartGame(){
             Startstate.style.display = 'none';
             SountrackMusic.play();
+            startTimer();
     }
     setTimeout(() => {
         document.getElementById('StartMenu').onclick = StartGame;
@@ -248,20 +301,33 @@ document.addEventListener("DOMContentLoaded", function() {
         var CoverOne = document.getElementById(SelectBackcover[0]);
         var CoverTwo = document.getElementById(SelectBackcover[1]);
         var AudioSuccess = document.getElementById('SuccessMatch')
+        var BgChange = document.getElementsByTagName('body')[0];
         AudioSuccess.volume = Soundcontrol.value;
 
-        if (firstTAROT.src === secondTAROT.src) {           
-        firstTAROT.style.display = 'block';
-        secondTAROT.style.display = 'block';
-        firstTAROT.classList.add('locket');
-        secondTAROT.classList.add('locket');
-        firstTAROT.classList.remove('flipped')
-        secondTAROT.classList.remove('flipped')
+        if (firstTAROT.src === secondTAROT.src) {
+            setTimeout(function(){
+                firstTAROT.style.display = 'block';
+            secondTAROT.style.display = 'block';
+            firstTAROT.classList.add('locket');
+            secondTAROT.classList.add('locket');
+            CoverOne.classList.remove('flipped');
+            CoverTwo.classList.remove('flipped');
+            },800 )           
+            
         if (soundstate === true){
-            AudioSuccess.play();
+            setTimeout(function(){
+                AudioSuccess.play();
+            },500 )
+            
             LastCard = LastCard + 2
             if (LastCard === 20){
-                Finish()
+                ShowScore();
+                stopTimer();
+                setTimeout(function(){
+                Finish();
+                BgChange.style.background = 'url(./images/Fondos/WINGiftBg.gif)';
+                },300 )
+
             }
         }
         
@@ -273,8 +339,8 @@ document.addEventListener("DOMContentLoaded", function() {
             secondTAROT.style.display = 'none';
             CoverOne.style.display = 'block';
             CoverTwo.style.display = 'block';
-            firstTAROT.classList.remove('flipped')
-            secondTAROT.classList.remove('flipped')
+            CoverOne.classList.remove('flipped')
+            CoverTwo.classList.remove('flipped')
             SelectCards = [];
             SelectBackcover = [];
             
@@ -441,6 +507,53 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         };
 
-    
+    ///Base de datos///
+    function guardar() {
+        var username = document.getElementById("Name").value;
 
+        db.collection("Score").where("Username", "==", username).get()
+            .then((querySnapshot) => {
+                if (querySnapshot.size > 0) {
+                    // Si el nombre de usuario ya existe, actualizar el documento correspondiente
+                    var idDocumento = querySnapshot.docs[0].id;
+                    var tiempoActual = querySnapshot.docs[0].data().Time;
+                    var tiempoNuevo = SecondsFirebase;
+
+                    if (tiempoNuevo <= tiempoActual) {
+                        db.collection("Score").doc(idDocumento).update({
+                            Time: tiempoNuevo
+                            // Aquí puedes actualizar otros campos si es necesario
+                        })
+                        .then(() => {
+                            alert('Score has been updated');
+                            Finishstate.style.display = 'none';
+                        })
+                        .catch((error) => {
+                            Finishstate.style.display = 'none';
+                            alert('Something went wrong while updating the score');
+                        });
+                    } else {
+                        alert('New score is lower than the current score');
+                    }
+                } else {
+                    // Si el nombre de usuario no existe, agregar un nuevo documento a la colección
+                    db.collection("Score").add({
+                        Username: username,
+                        Time: SecondsFirebase,
+                        // Agrega aquí otros campos si es necesario
+                    })
+                    .then(() => {
+                        alert('Score has been saved');
+                        Finishstate.style.display = 'none';
+                    })
+                    .catch((error) => {
+                        alert('Something went wrong while saving the score');
+                    });
+                }
+            })
+            .catch((error) => {
+                alert('Something went wrong while checking if the username already exists');
+            });
+    }
+    document.getElementById('Save').onclick = guardar;
 })

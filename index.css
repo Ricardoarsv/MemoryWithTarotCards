@@ -5,8 +5,8 @@
 @media screen and (min-width: 971px) {
     body{
         background: url('./images/Fondos/bg.jpg');
-        background-attachment: fixed;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         zoom: 70%;
         margin: 4em, 4em 2em 4em;
         display: flex;
@@ -27,12 +27,12 @@
     text-align: center;
     background: rgba(210, 211, 222, 0.12);
     border-radius: 1em;
-    width: 53%;
+    width: 50%;
     height: 85%;
     position: absolute;
     z-index: 1;
     top: 49.2%;
-    left: 56.5%;
+    left: 55%;
     transform: translate(-50%, -50%);
 }
 #StartMenu button{
@@ -64,16 +64,41 @@
     background: rgba(245, 245, 245, 0.556);
     border-radius: 1em;
     width: 30%;
-    height: 30%;
+    height: 40%;
     position: absolute;
     z-index: 1;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 55%;
+    margin-block-start: 10px;
+    margin-block-end: 1px;
     transform: translate(-50%, -50%);
-    -webkit-border-radius: 1em;
-    -moz-border-radius: 1em;
-    -ms-border-radius: 1em;
-    -o-border-radius: 1em;
+}
+#Username{
+    text-align: center;
+    margin-block-start: 1px;
+    margin-block-end: 1px;
+}
+#FinishMenu input{
+    border-radius: 1em;
+    height: 2em;
+    text-align: center;
+    border: none;
+}
+
+#FinishMenu button{
+    border-radius: 1em;
+    height: 2em;
+    text-align: center;
+    border: none;
+}
+
+#FinishMenu:hover button{
+    background: #4c7fff;
+    transition: 3s ease-in-out;
+    -webkit-transition: 3s ease-in-out;
+    -moz-transition: 3s ease-in-out;
+    -ms-transition: 3s ease-in-out;
+    -o-transition: 3s ease-in-out;
 }
 
 #Menu{
@@ -88,6 +113,8 @@
 }
 
 .menu{
+    transform: rotateY(0);
+    transition: transform 0.5s ease;
     position: absolute;
     z-index: 1;
     text-align: center;
@@ -101,8 +128,15 @@
     padding: 2em;
     font-family: courier;
     color: rgb(6, 9, 47);
+    user-select: none;
 }
-
+.Show {
+    transform: scale3d(10%);
+    -webkit-transform: scale3d(10%);
+    -moz-transform: scale3d(10%);
+    -ms-transform: scale3d(10%);
+    -o-transform: scale3d(10%);
+}
 .menu button{
     border-style: none;
     background: transparent;
@@ -182,21 +216,17 @@ input[type="range"] {
     color: white;
     font-size: 15px;
     text-align: center;
+    width: 20em;
     
 }
 
 .TarotCards{
     width: 8.2em;
-    height: 11.7em;
+    height: 11.6em;
     display: none;
     cursor: pointer;
     user-select: none;
-    transition: transform 1s ease;
     transform-style: preserve-3d;
-    -webkit-transition: transform 1s ease;
-    -moz-transition: transform 1s ease;
-    -ms-transition: transform 1s ease;
-    -o-transition: transform 1s ease;
 }
 
 .TarotCardsback{
@@ -207,8 +237,18 @@ input[type="range"] {
 }
 
 .flipped {
-    transform: rotateY(180deg);
+    transition: 1s;
+    transform: rotateY(-100deg);
+    -webkit-transform: rotateY(-100deg);
+    -moz-transform: rotateY(-100deg);
+    -ms-transform: rotateY(-100deg);
+    -o-transform: rotateY(-100deg);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
 }
+
 .locket{
     transition: 2s ease-out;
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(83, 26, 163);
@@ -224,8 +264,41 @@ input[type="range"] {
     
 }
 
+.score{
+    visibility: hidden;
+    background: rgba(255, 255, 255, 0.227);
+    border-radius: 1em;
+    color: white;
+    margin-right: 0.5em;
+    margin-top: 1em;
+    width: 10em;
+    font-size: 2em;
+    font-family: courier;
+    border: 1px solid rgba(24, 0, 71, 0.776);
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    user-select: none;
+}
 
+.score td{
+    text-align: center;
+    font-size: 0.7em;
+}
 
+#Timer{
+    background: rgba(245, 245, 245, 0.261);
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    border: 1px solid rgba(24, 0, 71, 0.776);
+    border-radius: 1em;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    user-select: none;
+    cursor: pointer;
+}
 
 @media only screen and (min-width: 376px) and (max-width:720px){
     body{
