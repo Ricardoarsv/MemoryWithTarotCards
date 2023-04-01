@@ -22,7 +22,7 @@
 }
 
 #StartMenu{
-    display: none;
+    display: block;
     font-size: 2em;
     text-align: center;
     background: rgba(210, 211, 222, 0.12);
@@ -58,7 +58,7 @@
 }
 
 #FinishMenu{
-    display: block;
+    display: none;
     font-size: 2em;
     text-align: center;
     background: rgba(245, 245, 245, 0.556);
