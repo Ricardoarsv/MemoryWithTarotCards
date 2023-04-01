@@ -58,7 +58,7 @@
 }
 
 #FinishMenu{
-    display: none;
+    display: block;
     font-size: 2em;
     text-align: center;
     background: rgba(245, 245, 245, 0.556);
@@ -484,12 +484,19 @@ input[type="range"] {
         width: 8em;
         margin-top: 3em;
     }
+
+    .score{
+        margin-left: 3em;
+        top: 40%;
+        position: absolute;
+    }
+
     .Credits{
-        margin-left: 18%;
+        margin-left: 20%;
     }
 
     #Timer{
-        margin-left: 1em;
+        margin-left: 2em;
     }
     .AudioControls{
         background: rgba(255, 255, 255, 0.479);
@@ -554,7 +561,7 @@ input[type="range"] {
         width: 60%;
         height: 25%;
         font-size: 1.5em;
-        top: 65%;
+        top: 52%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
