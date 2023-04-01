@@ -462,8 +462,6 @@ input[type="range"] {
         width: 6em;
     }
     .title{
-        margin-left: 2.5em;
-        width: 50%;
         font-size: 3em;
         text-align: center;
         font-family: courier;
