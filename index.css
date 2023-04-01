@@ -58,7 +58,7 @@
 }
 
 #FinishMenu{
-    display: none;
+    display: block;
     font-size: 2em;
     text-align: center;
     background: rgba(245, 245, 245, 0.556);
@@ -471,7 +471,9 @@ input[type="range"] {
         -webkit-background-clip: text;
         
     }
-
+    #FinishMenu{
+        top: 10%;
+    }
 }
 
 @media screen and (max-width: 375px){
