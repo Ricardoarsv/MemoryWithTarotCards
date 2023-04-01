@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (Scorestate.style.visibility === 'hidden'){
             Scorestate.style.visibility = 'visible'
         } else {
-            Scorestate.style.visibility = 'visible'
+            Scorestate.style.visibility = 'hidden'
         }
     }
 
