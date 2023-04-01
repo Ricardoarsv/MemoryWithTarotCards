@@ -439,8 +439,19 @@ input[type="range"] {
         margin-top: 3em;
     }
 
+    .score{
+        margin-left: 3em;
+        top: 40%;
+        position: absolute;
+    }
+
     .Credits{
         font-size: 10px;
+        margin-left: 20%;
+    }
+
+    #Timer{
+        margin-left: 2em;
     }
     .TarotCards{
     width: 6em;
