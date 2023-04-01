@@ -475,7 +475,7 @@ input[type="range"] {
         background-attachment: fixed;
         background-repeat: no-repeat;
         overflow: hidden;
-        zoom: 70%;
+        zoom: 90%;
         font-size: 10px;
         margin: 0 1.2em 1em;
     }
